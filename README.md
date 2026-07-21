@@ -1,4 +1,5 @@
-# Bridging Participation Gaps with Robotics — Supplementary Materials
+# Bridging Participation Gaps with Robotics 
+# — Supplementary Materials
 
 This repository contains the supplementary materials for the study **"Bridging Participation Gaps with Robotics: Empirical Evaluation of UDL and Usability Principles in an Educational Robot Prototype for Inclusive Education"**, submitted to *MedienPädagogik – Zeitschrift für Theorie und Praxis der Medienbildung*.
 
