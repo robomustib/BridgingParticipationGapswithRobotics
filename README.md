@@ -26,7 +26,7 @@ The German file is the original instrument as administered; the English version 
 
 ## The analysis script (`analysis/`)
 
-`TOKADI_Analysis_v4.py` reproduces the values reported in the article and the tables below (with the exception of Table S11, see the note there). It reads the consolidated de-identified dataset and computes the descriptive statistics, reliability coefficients, inferential tests, and robustness analyses. The dataset itself is not published here (see *Data availability* below).
+`TOKADI_Analysis_v4.py` reproduces the values reported in the article and the tables below, with three exceptions noted at the respective tables: Table S11 (teacher intervention items, not in the consolidated dataset), the STEM-interest row of Table S8, and the n = 14 operationalisation in Table S9. It reads the consolidated de-identified dataset and computes the descriptive statistics, reliability coefficients, inferential tests, and robustness analyses. The dataset itself is not published here (see *Data availability* below).
 
 Required environment:
 
@@ -104,7 +104,7 @@ Five-item motivation questionnaire, six-point scale (0 = not at all, 5 = very mu
 
 ### Table S8. Group comparisons in overall satisfaction
 
-Independent-samples t-tests on the five-item overall satisfaction scale; * p < .05. The special-educational-needs comparison is examined further in Table S9 and in the robustness analyses reported in the manuscript.
+Independent-samples t-tests on the five-item overall satisfaction scale; * p < .05. The special-educational-needs comparison is examined further in Table S9 and in the robustness analyses reported in the manuscript. The STEM-interest row is not part of the script's group-comparison module and is reproduced from the manuscript.
 
 | Characteristic | Group 1 | Group 2 | t | p | d |
 |---|---|---|---|---|---|
@@ -118,7 +118,7 @@ Independent-samples t-tests on the five-item overall satisfaction scale; * p < .
 
 ### Table S9. Sensitivity analysis: alternative operationalisations of support need
 
-p-values for Student's t, Welch's t, and Mann-Whitney U on students' overall satisfaction under four operationalisations of support need. The manuscript's primary operationalisation is B (documented Förderschwerpunkte, n = 13); its bootstrap 95 % CI of the mean difference is [−0.98, −0.03] (10,000 resamples, seed = 42). The direction is consistent across all operationalisations, with the strongest effect under the narrowest definition (C).
+p-values for Student's t, Welch's t, and Mann-Whitney U on students' overall satisfaction under four operationalisations of support need. The manuscript's primary operationalisation is B (documented Förderschwerpunkte, n = 13); its bootstrap 95 % CI of the mean difference is [−0.98, −0.03] (10,000 resamples; bootstrap intervals vary marginally between runs). The direction is consistent across all operationalisations, with the strongest effect under the narrowest definition (C). The script's sensitivity module labels the operationalisations in a different order and replaces the n = 14 operationalisation with a broader one (support need including migration background, n = 83); the rows with n = 19, 13, and 8 reproduce directly from the script.
 
 | Operationalisation | n | M with | M without | Student p | Welch p | Mann-Whitney p | d |
 |---|---|---|---|---|---|---|---|
