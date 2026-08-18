@@ -1,8 +1,8 @@
 """
 
 VERWENDUNG
-TOKADI_Analyse_v4.py und TOKADI_Datensatz_final.xlsx in denselben Ordner legen:
-      python TOKADI_Analyse_v4.py
+TOKADI_Analyse.py und TOKADI_Datensatz_final.xlsx in denselben Ordner legen:
+      python TOKADI_Analyse.py
 BENOETIGT:  pandas, numpy, scipy, openpyxl
       pip install pandas numpy scipy openpyxl
       
