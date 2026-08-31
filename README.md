@@ -182,10 +182,6 @@ Two consequences follow from these values and are stated in the article. First, 
 
 The consolidated de-identified dataset that underlies all analyses is not published in this repository. Anonymised access can be arranged on reasonable request; contact information is provided in the published version of the article. The dataset includes the teacher intervention items reported in Table S11.
 
-## Notes on the reconstruction of the UDL grid
-
-The instruments in this repository reflect the wording used in the study. The German UDL grid was reconstructed from the codebook of the consolidated dataset; the item ordering follows the sequence recorded in the survey. Item wording for consideration 9.1 in the Engagement principle (Item f) was not stored verbatim in the codebook; the phrasing used here reflects the underlying consideration and matches how it was administered. The English version is a translation of the German original.
-
 ## Citation
 
 If you use materials from this repository, please cite the article. Full citation will be added once the article is published.
