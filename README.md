@@ -4,7 +4,7 @@ This repository contains the supplementary materials for the study **"Bridging P
 
 The study evaluates the prototype educational robot TOKADI (*Tool for Collaborative and Adaptive Didactics*) as a designed artefact along three dimensions: conformity with the Universal Design for Learning (UDL) principles, usability, and socio-emotional experience of learners in inclusive primary school classrooms. Data were collected in a mixed-methods design with N = 10 teachers and N = 137 students (aged 8–12; N = 139 for the group-activity survey) across six inclusive primary school classes at three schools.
 
-The manuscript reports the core results; this repository provides the UDL evaluation grid, the analysis script, and the extended tables that could not be included in the article for reasons of length.
+The manuscript reports the core results; this repository provides the UDL evaluation grid, the usability instrument, the analysis script, and the extended tables that could not be included in the article for reasons of length.
 
 ## Repository contents
 
@@ -13,20 +13,25 @@ The manuscript reports the core results; this repository provides the UDL evalua
 ├── LICENSE                                            CC BY 4.0
 ├── instruments/
 │   ├── UDL_Grid_TOKADI_DE.docx / .pdf                 UDL evaluation grid (26 items, German original)
-│   └── UDL_Grid_TOKADI_EN.docx / .pdf                 English translation
+│   ├── UDL_Grid_TOKADI_EN.docx / .pdf                 English translation
+│   └── SUS_UMUX.docx / .pdf                           usability instrument as administered (SUS five-point, UMUX seven-point)
 └── analysis/
-    └── TOKADI_Analysis.py                          full analysis script (Python 3.11)
+    └── TOKADI_Analysis_v5.py                          full analysis script (Python 3.11)
 ```
 
 ## The UDL evaluation grid (`instruments/`)
 
-The UDL evaluation grid used in the teacher survey was derived from the 35 considerations of the **UDL Guidelines 3.0** (CAST 2024) by reviewing each consideration against the criterion of direct technological addressability. Nine considerations concerning purely curricular or pedagogical aspects were excluded, yielding 26 items across the three UDL principles: Engagement (9), Representation (7), and Action & Expression (10). Items are rated on a five-point Likert scale (1 = does not apply, 5 = fully applies). Overall internal consistency in the present sample is acceptable (α = .802); subscale reliabilities are limited (Engagement α = .317, Representation α = .544, Action & Expression α = .726) and are interpreted descriptively in the manuscript.
+The UDL evaluation grid used in the teacher survey was derived from the 35 considerations of the **UDL Guidelines 3.0** (CAST 2024) by reviewing each consideration against the criterion of direct technological addressability. Nine considerations concerning purely curricular or pedagogical aspects were excluded, yielding 26 items across the three UDL principles: Engagement (9), Representation (7), and Action & Expression (10). Items are rated on a five-point Likert scale (1 = does not apply, 5 = fully applies). Overall internal consistency in the present sample is acceptable (α = .802); subscale reliabilities are limited (Engagement α = .317, Representation α = .544, Action & Expression α = .726) and are interpreted descriptively in the manuscript. Table S13 documents the sampling error attached to these coefficients.
 
 The German file is the original instrument as administered; the English version is a translation for international readers. Both include construction rationale, rating scale, and the two limitations noted in the manuscript (five checkpoint numbers assigned twice; N = 10 does not permit formal psychometric validation).
 
+## The usability instrument (`instruments/`)
+
+`SUS_UMUX.docx` is the questionnaire as administered to the teachers. It documents the response formats on which the usability scores are based: the System Usability Scale in its standard ten-item, five-point form, and the Usability Metric for User Experience in its original four-item, seven-point form. The scoring rules stated in the manuscript follow this instrument, that is, item contributions of 0 to 4 multiplied by 2.5 for the SUS, and reverse coding of the negatively phrased items as eight minus the response, sum minus four, divided by twenty-four and multiplied by one hundred for the UMUX.
+
 ## The analysis script (`analysis/`)
 
-`TOKADI_Analysis.py` reproduces the values reported in the article and the tables below, with three exceptions noted at the respective tables: Table S11 (teacher intervention items, not in the consolidated dataset), the STEM-interest row of Table S8, and the n = 14 operationalisation in Table S9. It reads the consolidated de-identified dataset and computes the descriptive statistics, reliability coefficients, inferential tests, and robustness analyses. The dataset itself is not published here (see *Data availability* below).
+`TOKADI_Analysis_v5.py` reproduces the values reported in the article and the tables below, with two exceptions noted at the respective tables: the STEM-interest row of Table S8 and the n = 14 operationalisation in Table S9. It reads the consolidated de-identified dataset and computes the descriptive statistics, reliability coefficients, inferential tests, and robustness analyses. The dataset itself is not published here (see *Data availability* below).
 
 Required environment:
 
@@ -38,7 +43,7 @@ Required environment:
 
 ## Supplementary tables
 
-The tables below are reproduced verbatim from the manuscript before shortening and keep their original table numbers with an "S" prefix. Tables 1, 2, 6, and 12 remain in the article (there renumbered as Tables 1–4), hence the gaps in the sequence (no S1, S2, S6, S12).
+The tables below are reproduced verbatim from the manuscript before shortening and keep their original table numbers with an "S" prefix. Tables 1, 2, 6, and 12 remain in the article (there renumbered as Tables 1–4), hence the gaps in the sequence (no S1, S2, S6, S12). Table S13 is an additional table prepared for the revised version.
 
 ### Table S3. Descriptive statistics of the UDL principle ratings (N = 10)
 
@@ -67,7 +72,7 @@ Five consideration numbers are assigned twice to different items (1.2, 4.1, 4.2,
 | Representation 3.2 | Consistent response to input, cause-effect relations | 4.80 | 0.42 |
 | Representation 1.1 | Adjustable perceptual settings (volume, light intensity) | 4.80 | 0.42 |
 | Representation 1.2 | Tactile components (buttons, 3D-printed parts) | 4.80 | 0.42 |
-| Engagement 9.1 | Successful work strengthens confidence and self-efficacy | 4.70 | 0.48 |
+| Engagement 9.1 | Encourages students to formulate their own goals and approaches | 4.70 | 0.48 |
 | Engagement 9.2 | Anthropomorphic design facilitates emotional bond | 4.70 | 0.48 |
 | Representation 2.5 | Clear status feedback via LED matrix | 4.70 | 0.48 |
 | Engagement 8.3 | Shared use fosters a sense of community | 4.60 | 0.52 |
@@ -104,7 +109,7 @@ Five-item motivation questionnaire, six-point scale (0 = not at all, 5 = very mu
 
 ### Table S8. Group comparisons in overall satisfaction
 
-Independent-samples t-tests on the five-item overall satisfaction scale; * p < .05. The special-educational-needs comparison is examined further in Table S9 and in the robustness analyses reported in the manuscript. The STEM-interest row is not part of the script's group-comparison module and is reproduced from the manuscript.
+Independent-samples t-tests on the five-item overall satisfaction scale; * p < .05. The a-priori test family for the multiple-testing correction reported in the manuscript comprises the first six comparisons (Bonferroni α = .0083). The STEM-interest row is listed for completeness, is not part of that family, and is not reproducible from the consolidated dataset, which does not contain this variable; it is reproduced from the manuscript. The special-educational-needs comparison is examined further in Table S9 and in the robustness analyses reported in the manuscript.
 
 | Characteristic | Group 1 | Group 2 | t | p | d |
 |---|---|---|---|---|---|
@@ -114,7 +119,7 @@ Independent-samples t-tests on the five-item overall satisfaction scale; * p < .
 | Grade level | Grade 3 (94) 4.20 | Grade 4 (43) 4.34 | −0.92 | .361 | −0.17 |
 | Technology ownership | with (119) 4.24 | without (18) 4.28 | −0.16 | .872 | −0.04 |
 | Prior robotics experience | with (16) 4.51 | without (121) 4.21 | +1.36 | .176 | +0.36 |
-| STEM interest | with (34) 4.19 | without (103) 4.27 | −0.48 | .629 | −0.10 |
+| STEM interest (not in the test family) | with (34) 4.19 | without (103) 4.27 | −0.48 | .629 | −0.10 |
 
 ### Table S9. Sensitivity analysis: alternative operationalisations of support need
 
@@ -145,7 +150,7 @@ Nine items on a three-point smiley scale, ordered by mean; «% "+1"» is the sha
 
 ### Table S11. Teacher assessment of intervention outcomes (N = 10, one-sample tests against the scale midpoint)
 
-* p < .05. The two helpfulness items offered an explicit «not applicable» option; no teacher selected it. The individual-item teacher intervention data is stored in a separate teacher questionnaire file and is not included in the consolidated dataset used by the analysis script; the values below are reproduced from the manuscript. The teacher questionnaire dataset will be provided together with the primary dataset on request.
+* p < .05. The two helpfulness items offered an explicit «not applicable» option; no teacher selected it.
 
 | Item | Scale | M | SD | Midpoint | t(9) | p | d |
 |---|---|---|---|---|---|---|---|
@@ -157,9 +162,24 @@ Nine items on a three-point smiley scale, ordered by mean; «% "+1"» is the sha
 | Promotion of group cohesion | 1–5 | 2.70 | 0.67 | 3.0 | −1.41 | .193 | −0.44 |
 | Promotion of inclusion in the class | 1–5 | 2.10 | 0.74 | 3.0 | −3.86 | .004 * | −1.22 |
 
+For the inclusion item, the exact Wilcoxon signed-rank test yields T = 0.0 and p = .016. Three teachers rated the midpoint, so seven differences remain, and .016 is the smallest two-sided p that this test can attain at n = 7. The one-sample t-test therefore holds under the Bonferroni threshold of α = .0071 for this family while the exact rank test cannot reach it by construction. All seven non-zero differences are negative.
+
+### Table S13. Reliability diagnostics of the UDL evaluation grid (N = 10)
+
+Bootstrap confidence intervals from 10,000 resamples of the ten teachers. Values of α below zero occur when the between-person variance of the sum score is small relative to the item variances and are reported unchanged rather than truncated at zero. The mean inter-item correlation is the average of all off-diagonal correlations within a scale.
+
+| Scale | k | M | SD | Cronbach's α | 95 % CI for α | Mean inter-item r |
+|---|---|---|---|---|---|---|
+| Engagement | 9 | 4.31 | 0.26 | .317 | [−1.45, 0.70] | .11 |
+| Representation | 7 | 4.56 | 0.26 | .544 | [−7.78, 0.83] | .27 |
+| Action & Expression | 10 | 4.08 | 0.36 | .726 | [−0.04, 0.88] | .23 |
+| Total grid | 26 | 4.29 | 0.26 | .802 | [0.17, 0.92] | .17 |
+
+Two consequences follow from these values and are stated in the article. First, with ten raters the confidence intervals span almost the entire admissible range, so none of the three subscale coefficients can be interpreted as an estimate of construct reliability. Second, the ordering of the coefficients does not reflect the homogeneity of the items: Representation is more homogeneous than Action & Expression, with mean inter-item correlations of .27 and .23, yet its coefficient is lower, because α increases with the number of items and the two scales comprise seven and ten items respectively. For this reason the Engagement scale is not interpreted as a construct score anywhere in the article.
+
 ## Data availability
 
-The consolidated de-identified dataset that underlies all analyses is not published in this repository. Anonymised access can be arranged on reasonable request; contact information is provided in the published version of the article.
+The consolidated de-identified dataset that underlies all analyses is not published in this repository. Anonymised access can be arranged on reasonable request; contact information is provided in the published version of the article. The dataset includes the teacher intervention items reported in Table S11.
 
 ## Notes on the reconstruction of the UDL grid
 
@@ -171,7 +191,7 @@ If you use materials from this repository, please cite the article. Full citatio
 
 For the UDL Guidelines referenced by the grid:
 
-> CAST. 2024. *Universal Design for Learning Guidelines Version 3.0.* Wakefield, MA: CAST. https://udlguidelines.cast.org/
+> CAST. 2024. *Universal Design for Learning Guidelines Version 3.0.* Lynnfield, MA: CAST. https://udlguidelines.cast.org/
 
 ## Licence
 
